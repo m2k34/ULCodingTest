@@ -6,20 +6,36 @@ namespace ULCodingTest.ExtensionMethods
     {
         public static List<string> Parse(this string str)
         {
+            ReplaceEncodedValuesIfAny(ref str);
             var list = new List<string>();
-            if (str.Any(x => Char.IsLetter(x) || Char.IsPunctuation(x)))
+            if (str.Any(x => Char.IsLetter(x)))
             {
                 return list;
             }
             else
             {
+                var vals = str.Where(x => !Char.IsDigit(x)).ToList();
+
+                if(vals.Any(x=> !IsOperator(x)))
+                {
+                    return list;
+                }
                 list = SplitString(str);
+
                 if (!IsCorrectFormat(list))
                 {
                     list = new List<string>();
                 }
             }
             return list;
+        }
+
+        public static void ReplaceEncodedValuesIfAny(ref string expression)
+        {
+            if (expression.Contains("%2F"))
+            {
+                expression = expression.Replace("%2F", "/");
+            }
         }
 
         public static List<string> SplitString(string str)
@@ -66,6 +82,11 @@ namespace ULCodingTest.ExtensionMethods
         public static bool IsOperator(string str)
         {
             return (str == "*" || str == "/" || str == "-" || str == "+");
+        }
+
+        public static bool IsOperator(char str)
+        {
+            return (str == '*' || str == '/'|| str == '-' || str =='+');
         }
     }
 }
