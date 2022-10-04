@@ -17,14 +17,12 @@
 
             sum = Evaluate(expression);
 
-            var list = expList;
+            UpdateList(ref expList, index, sum.ToString());
 
-            UpdateList(ref list, index, sum.ToString());
-
-            if (list.Count != 1)
+            if (expList.Count != 1)
             {
 
-                return Calculate(list);
+                return Calculate(expList);
 
             }
 

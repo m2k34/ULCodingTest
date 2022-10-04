@@ -17,6 +17,10 @@ namespace ULCodingTest.Controllers
         public string Calculate(string expression)
         {
             var val = expression.Parse();
+            if(val.Count  == 0)
+            {
+                return "invalid format";
+            }
             var sum = Calculator.Calculate(val);
             return sum.ToString();
         }
