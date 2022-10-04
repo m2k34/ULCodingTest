@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULCodingTest", "ULCodingTest\ULCodingTest.csproj", "{E1DEC219-46AB-46FB-86DA-036E80BBF58B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULCodingTest.Tests", "ULCodingTest.Tests\ULCodingTest.Tests.csproj", "{EE19CC8B-6D3D-4C84-8463-9EB1C1289042}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1DEC219-46AB-46FB-86DA-036E80BBF58B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1DEC219-46AB-46FB-86DA-036E80BBF58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1DEC219-46AB-46FB-86DA-036E80BBF58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1DEC219-46AB-46FB-86DA-036E80BBF58B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE19CC8B-6D3D-4C84-8463-9EB1C1289042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE19CC8B-6D3D-4C84-8463-9EB1C1289042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE19CC8B-6D3D-4C84-8463-9EB1C1289042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE19CC8B-6D3D-4C84-8463-9EB1C1289042}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D18A147-E888-4B17-B6F9-7E4DBE4DD9A6}
+	EndGlobalSection
+EndGlobal
