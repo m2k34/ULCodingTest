@@ -29,7 +29,7 @@
             return sum;
         }
 
-        public static void UpdateList(ref List<string> list, int index, string value)
+        private static void UpdateList(ref List<string> list, int index, string value)
         {
             for (int i = 1; i >= -1; i--)
             {

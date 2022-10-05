@@ -6,17 +6,20 @@ namespace ULCodingTest.ExtensionMethods
     {
         public static List<string> Parse(this string str)
         {
-            ReplaceEncodedValuesIfAny(ref str);
+
             var list = new List<string>();
+
+            ReplaceEncodedValuesIfAny(ref str);
+
             if (str.Any(x => Char.IsLetter(x)))
             {
                 return list;
             }
             else
             {
-                var vals = str.Where(x => !Char.IsDigit(x)).ToList();
+                var operatorList = str.Where(x => !Char.IsDigit(x)).ToList();
 
-                if(vals.Any(x=> !IsOperator(x)))
+                if(operatorList.Any(x=> !IsOperator(x)))
                 {
                     return list;
                 }
@@ -30,7 +33,7 @@ namespace ULCodingTest.ExtensionMethods
             return list;
         }
 
-        public static void ReplaceEncodedValuesIfAny(ref string expression)
+        private static void ReplaceEncodedValuesIfAny(ref string expression)
         {
             if (expression.Contains("%2F"))
             {
