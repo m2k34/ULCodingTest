@@ -13,4 +13,4 @@ If there are any, I use recursion to do the same logic on the updated expression
 By doing so I can tell the program to start by evaluating any division expressions and then multiplication expressions.
 After doing so it'll will evaluate any addition or subtraction if there are any. Until the last value left is a single item which is the sum.
 
-To make this code more maintainable I seperated methods into their own relative classes. I created a seperate parser class as well as a seperate calculator class. Also by creating an object named Expression with its own properties I ensured that the code was easier to read.
+To make this code more maintainable I seperated methods into their own relative classes. I created a seperate parser class as well as a seperate calculator class. Also by creating an object named Expression with its own properties I ensured that the code was easier to read and the data was easier to manipulate at certain stages of the program. I tested the code using a TDD approach to also maintain its qualitiy.
